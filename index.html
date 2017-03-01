@@ -255,6 +255,9 @@
 jQuery( document ).ready(function() {
 	jQuery('[data-toggle="popover"]').popover();
 	jQuery('[data-toggle="tooltip"]').tooltip();
+	$( 'button.bd-toggle-animated-progress' ).click(function() {
+		$( this ).prev().children( '.progress-bar' ).toggleClass( 'progress-bar-animated' );
+	});
 });
 </script>
 </head>
