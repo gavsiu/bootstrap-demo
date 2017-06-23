@@ -1,295 +1,29 @@
-<style>
-.bd-content>h1:not(:first-child),
-.bd-content>h2:not(:first-child),
-.bd-content>h3:not(:first-child) {
-	margin-top: 1rem
-}
+<?php
+	/*
+		Template Name: Bootstrap v4 Demo
+	*/
+	/*
+		Use this page as a template file in your theme to test all elements of Bootstrap version 4.
 
-.bd-example {
-	position: relative;
-	padding: 1rem;
-	margin: 1rem -1rem;
-	border: solid #f7f7f9;
-	border-width: .2rem 0 0
-}
+		Be sure to move the /bootstrap4-demo-images/ directory into your /wp-content/ directory.
 
-.bd-example::after {
-	display: block;
-	content: "";
-	clear: both
-}
+		Be sure to add all CSS between the <script> ... <script> tags in index.html into your theme's CSS stylesheet.
+	*/
+get_header();
+?>
 
-@media (min-width:576px) {
-
-.bd-example {
-	padding: 1.5rem;
-	margin-right: 0;
-	margin-bottom: 0;
-	margin-left: 0;
-	border-width: .2rem
-}
-}
-
-.bd-example+p {
-	margin-top: 2rem
-}
-
-.bd-example .pos-f-t {
-	position: relative;
-	margin: -1rem
-}
-
-#carouselExampleSlidesOnlyFill .carousel-inner .carousel-item,
-#carouselExampleSlidesOnlyFit .carousel-inner .carousel-item,
-#carouselExampleControls .carousel-inner .carousel-item,
-#carouselExampleIndicators .carousel-inner .carousel-item,
-#carouselExampleCaptions .carousel-inner .carousel-item {
-	height:300px
-}
-
-#carouselExampleSlidesOnlyFill .carousel-inner .carousel-item img,
-#carouselExampleControls .carousel-inner .carousel-item img,
-#carouselExampleIndicators .carousel-inner .carousel-item img,
-#carouselExampleCaptions .carousel-inner .carousel-item img {
-	max-width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-#carouselExampleSlidesOnlyFit .carousel-inner .carousel-item img {
-    max-height: 100%;
-    max-width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-@media (min-width:576px) {
-
-.bd-example .pos-f-t {
-	margin: -1.5rem
-}
-}
-
-.bd-example>.form-control+.form-control {
-	margin-top: .5rem
-}
-
-.bd-example>.alert+.alert,
-.bd-example>.nav+.nav,
-.bd-example>.navbar+.navbar,
-.bd-example>.progress+.btn,
-.bd-example>.progress+.progress {
-	margin-top: 1rem
-}
-
-.bd-example>.dropdown-menu:first-child {
-	position: static;
-	display: block
-}
-
-.bd-example>.form-group:last-child {
-	margin-bottom: 0
-}
-
-.bd-example>.close {
-	float: none
-}
-
-.bd-example-type .table .type-info {
-	color: #999;
-	vertical-align: middle
-}
-
-.bd-example-type .table td {
-	padding: 1rem 0;
-	border-color: #eee
-}
-
-.bd-example-type .table tr:first-child td {
-	border-top: 0
-}
-
-.bd-example-type h1,
-.bd-example-type h2,
-.bd-example-type h3,
-.bd-example-type h4,
-.bd-example-type h5,
-.bd-example-type h6 {
-	margin: 0
-}
-
-.bd-example-bg-classes p {
-	padding: 1rem
-}
-
-.bd-example>img+img {
-	margin-left: .5rem
-}
-
-.bd-example>.btn-group {
-	margin-top: .25rem;
-	margin-bottom: .25rem
-}
-
-.bd-example>.btn-toolbar+.btn-toolbar {
-	margin-top: .5rem
-}
-
-.bd-example-control-sizing input[type=text]+input[type=text],
-.bd-example-control-sizing select {
-	margin-top: .5rem
-}
-
-.bd-example-form .input-group {
-	margin-bottom: .5rem
-}
-
-.bd-example>textarea.form-control {
-	resize: vertical
-}
-
-.bd-example>.list-group {
-	max-width: 400px
-}
-
-.bd-example .fixed-top,
-.bd-example .sticky-top {
-	position: static;
-	margin: -1rem -1rem 1rem
-}
-
-.bd-example .fixed-bottom {
-	position: static;
-	margin: 1rem -1rem -1rem
-}
-
-@media (min-width:576px) {
-
-.bd-example .fixed-top,
-.bd-example .sticky-top {
-	margin: -1.5rem -1.5rem 1rem
-}
-
-.bd-example .fixed-bottom {
-	margin: 1rem -1.5rem -1.5rem
-}
-}
-
-.bd-example .pagination {
-	margin-top: .5rem;
-	margin-bottom: .5rem
-}
-
-.bd-example-modal {
-	background-color: #fafafa
-}
-
-.bd-example-modal .modal {
-	position: relative;
-	top: auto;
-	right: auto;
-	bottom: auto;
-	left: auto;
-	z-index: 1;
-	display: block
-}
-
-.bd-example-modal .modal-dialog {
-	left: auto;
-	margin-right: auto;
-	margin-left: auto
-}
-
-.bd-example-tabs .nav-tabs {
-	margin-bottom: 1rem
-}
-
-.bd-example-tooltips {
-	text-align: center
-}
-
-.bd-example-tooltips>.btn {
-	margin-top: .25rem;
-	margin-bottom: .25rem
-}
-
-.bd-example-popover-static {
-	padding-bottom: 1.5rem;
-	background-color: #f9f9f9
-}
-
-.bd-example-popover-static .popover {
-	position: relative;
-	display: block;
-	float: left;
-	width: 260px;
-	margin: 1.25rem
-}
-
-.bd-example-tooltip-static .tooltip {
-	position: relative;
-	display: inline-block;
-	margin: 10px 20px;
-	opacity: 1
-}
-
-.scrollspy-example {
-	position: relative;
-	height: 200px;
-	margin-top: .5rem;
-	overflow: auto
-}
-
-.bd-example>.bg-danger:not(.navbar),
-.bd-example>.bg-faded:not(.navbar),
-.bd-example>.bg-info:not(.navbar),
-.bd-example>.bg-inverse:not(.navbar),
-.bd-example>.bg-primary:not(.navbar),
-.bd-example>.bg-success:not(.navbar),
-.bd-example>.bg-warning:not(.navbar) {
-	padding: .5rem;
-	margin-top: .5rem;
-	margin-bottom: .5rem
-}
-
-.bd-example-border-utils [class^=border-] {
-	display: inline-block;
-	width: 6rem;
-	height: 6rem;
-	margin: .25rem;
-	background-color: #f5f5f5;
-	border: 1px solid
-}
-</style>
-<script>
-jQuery( document ).ready(function() {
-	jQuery('[data-toggle="popover"]').popover();
-	jQuery('[data-toggle="tooltip"]').tooltip();
-	$( 'button.bd-toggle-animated-progress' ).click(function() {
-		$( this ).prev().children( '.progress-bar' ).toggleClass( 'progress-bar-animated' );
-	});
-});
-</script>
 <div class="container-fluid bd-content">
 	<h1 class="display-4">Layout</h1>
 	<h1 class="bd-title" id="content">Media object</h1>
 	<h2 id="nesting">Nesting</h2>
-		<div class="bd-example" data-example-id="">
+		<div class="bd-example">
 			<div class="media">
-				<img class="d-flex mr-3" data-src="" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-01.jpg">
+				<img class="d-flex mr-3" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-01.jpg">
 				<div class="media-body">
 					<h5 class="mt-0">Media heading</h5>
 					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
 					<div class="media mt-3"> 
-						<a class="d-flex pr-3" href="#"> <img data-src="" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-02.jpg"> </a>
+						<a class="d-flex pr-3" href="#"> <img alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-02.jpg"> </a>
 						<div class="media-body">
 							<h5 class="mt-0">Media heading</h5>
 							Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
@@ -299,8 +33,8 @@ jQuery( document ).ready(function() {
 			</div>
 		</div>
 	<h2 id="alignment">Alignment</h2>
-		<div class="bd-example" data-example-id="">
-			<div class="media"> <img class="d-flex align-self-start mr-3" data-src="" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-03.jpg">
+		<div class="bd-example">
+			<div class="media"> <img class="d-flex align-self-start mr-3" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-03.jpg">
 				<div class="media-body">
 					<h5 class="mt-0">Top-aligned media</h5>
 					<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
@@ -308,8 +42,8 @@ jQuery( document ).ready(function() {
 				</div>
 			</div>
 		</div>
-		<div class="bd-example" data-example-id="">
-			<div class="media"> <img class="d-flex align-self-center mr-3" data-src="" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-04.jpg">
+		<div class="bd-example">
+			<div class="media"> <img class="d-flex align-self-center mr-3" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-04.jpg">
 				<div class="media-body">
 					<h5 class="mt-0">Center-aligned media</h5>
 					<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
@@ -317,8 +51,8 @@ jQuery( document ).ready(function() {
 				</div>
 			</div>
 		</div>
-		<div class="bd-example" data-example-id="">
-			<div class="media"> <img class="d-flex align-self-end mr-3" data-src="" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-05.jpg">
+		<div class="bd-example">
+			<div class="media"> <img class="d-flex align-self-end mr-3" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-05.jpg">
 				<div class="media-body">
 					<h5 class="mt-0">Bottom-aligned media</h5>
 					<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
@@ -327,29 +61,29 @@ jQuery( document ).ready(function() {
 			</div>
 		</div>
 		<h2 id="order">Order</h2>
-		<div class="bd-example" data-example-id="">
+		<div class="bd-example">
 			<div class="media">
 				<div class="media-body">
 					<h5 class="mt-0 mb-1">Media object</h5>
 					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
 				</div>
-				<img class="d-flex ml-3" data-src="" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-06.jpg"> 
+				<img class="d-flex ml-3" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-06.jpg"> 
 			</div>
 		</div>
 	<h2 id="media-list">Media list</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="list-unstyled">
-			<li class="media"> <img class="d-flex mr-3" data-src="" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-07.jpg">
+			<li class="media"> <img class="d-flex mr-3" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-07.jpg">
 				<div class="media-body">
 					<h5 class="mt-0 mb-1">List-based media object</h5>
 					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div>
 			</li>
-			<li class="media my-4"> <img class="d-flex mr-3" data-src="" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-08.jpg">
+			<li class="media my-4"> <img class="d-flex mr-3" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-08.jpg">
 				<div class="media-body">
 					<h5 class="mt-0 mb-1">List-based media object</h5>
 					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div>
 			</li>
-			<li class="media"> <img class="d-flex mr-3" data-src="" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-09.jpg">
+			<li class="media"> <img class="d-flex mr-3" alt="128px x 128px native image, 64px x 64px display size" style="width: 64px; height: 64px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-128x128-09.jpg">
 				<div class="media-body">
 					<h5 class="mt-0 mb-1">List-based media object</h5>
 					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </div>
@@ -577,7 +311,7 @@ jQuery( document ).ready(function() {
 		</table>
 	</div>
 	<h3 id="customizing-headings">Customizing headings</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<h3>Fancy display heading<small class="text-muted">With faded secondary text</small></h3>
 	</div>
 	<h2 id="display-headings">Display headings</h2>
@@ -600,11 +334,11 @@ jQuery( document ).ready(function() {
 		</table>
 	</div>
 	<h2 id="lead">Lead</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<p class="lead"> Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus. </p>
 	</div>
 	<h2 id="inline-text-elements">Inline text elements</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<p>You can use the mark tag to
 			<mark>highlight</mark>
 			text.</p>
@@ -617,20 +351,20 @@ jQuery( document ).ready(function() {
 		<p><em>This line rendered as italicized text.</em></p>
 	</div>
 	<h2 id="abbreviations">Abbreviations</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<p><abbr title="attribute">attr</abbr></p>
 		<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
 	</div>
 	<h2 id="blockquotes">Blockquotes</h2>
 	<h3 id="naming-a-source">Naming a source</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<blockquote class="blockquote">
 			<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 			<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
 		</blockquote>
 	</div>
 	<h3 id="reverse-layout">Reverse layout</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<blockquote class="blockquote blockquote-reverse">
 			<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 			<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -638,7 +372,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h2 id="lists">Lists</h2>
 	<h3 id="unstyled">Unstyled</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="list-unstyled">
 			<li>Lorem ipsum dolor sit amet</li>
 			<li>Consectetur adipiscing elit</li>
@@ -658,7 +392,7 @@ jQuery( document ).ready(function() {
 		</ul>
 	</div>
 	<h3 id="inline">Inline</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="list-inline">
 			<li class="list-inline-item">Lorem ipsum</li>
 			<li class="list-inline-item">Phasellus iaculis</li>
@@ -666,7 +400,7 @@ jQuery( document ).ready(function() {
 		</ul>
 	</div>
 	<h3 id="description-list-alignment">Description list alignment</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<dl class="row">
 			<dt class="col-sm-3">Description lists</dt>
 			<dd class="col-sm-9">A description list is perfect for defining terms.</dd>
@@ -688,32 +422,32 @@ jQuery( document ).ready(function() {
 	</div>
 	<h1 class="bd-title" id="content">Code</h1>
 	<h2 id="inline-code">Inline code</h2>
-	<div class="bd-example" data-example-id=""> For example, <code>&lt;section&gt;</code> should be wrapped as inline. </div>
+	<div class="bd-example"> For example, <code>&lt;section&gt;</code> should be wrapped as inline. </div>
 	<h2 id="code-blocks">Code blocks</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
 		&lt;p&gt;And another line of sample text here...&lt;/p&gt;
 		</code></pre>
 	</div>
 	<h2 id="variables">Variables</h2>
-	<div class="bd-example" data-example-id=""> <var>y</var> = <var>m</var><var>x</var> + <var>b</var> </div>
+	<div class="bd-example"> <var>y</var> = <var>m</var><var>x</var> + <var>b</var> </div>
 	<h2 id="user-input">User input</h2>
-	<div class="bd-example" data-example-id=""> To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
+	<div class="bd-example"> To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
 		To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 	</div>
 	<h2 id="sample-output">Sample output</h2>
-	<div class="bd-example" data-example-id=""> <samp>This text is meant to be treated as sample output from a computer program.</samp> </div>
+	<div class="bd-example"> <samp>This text is meant to be treated as sample output from a computer program.</samp> </div>
 	<h1 class="bd-title" id="content">Images</h1>
 	<h2 id="responsive-images">Responsive images</h2>
-	<div class="bd-example"> <img data-src="" class="img-fluid" alt="2,00px x 500px native image, responsive display size" style="" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-2000x500-01.jpg"></div>
+	<div class="bd-example"> <img class="img-fluid" alt="2,00px x 500px native image, responsive display size" style="" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-2000x500-01.jpg"></div>
 	<h2 id="image-thumbnails">Image thumbnails</h2>
-	<div class="bd-example bd-example-images"> <img data-src="" class="img-thumbnail" alt="400px x 400px native image, 200px x 200px display size" style="width: 200px; height: 200px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-400x400-01.jpg"> </div>
+	<div class="bd-example bd-example-images"> <img class="img-thumbnail" alt="400px x 400px native image, 200px x 200px display size" style="width: 200px; height: 200px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-400x400-01.jpg"> </div>
 	<h2 id="aligning-images">Aligning images</h2>
-	<div class="bd-example bd-example-images clearfix"> <img data-src="" class="rounded float-left" alt="400px x 400px native image, 200px x 200px display size" style="width: 200px; height: 200px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-400x400-02.jpg"> <img data-src="" class="rounded float-right" alt="400px x 400px native image, 200px x 200px display size" style="width: 200px; height: 200px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-400x400-03.jpg"> </div>
-	<div class="bd-example bd-example-images"> <img data-src="" class="rounded mx-auto d-block" alt="400px x 400px native image, 200px x 200px display size" style="width: 200px; height: 200px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-400x400-04.jpg"> </div>
+	<div class="bd-example bd-example-images clearfix"> <img class="rounded float-left" alt="400px x 400px native image, 200px x 200px display size" style="width: 200px; height: 200px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-400x400-02.jpg"> <img class="rounded float-right" alt="400px x 400px native image, 200px x 200px display size" style="width: 200px; height: 200px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-400x400-03.jpg"> </div>
+	<div class="bd-example bd-example-images"> <img class="rounded mx-auto d-block" alt="400px x 400px native image, 200px x 200px display size" style="width: 200px; height: 200px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-400x400-04.jpg"> </div>
 	<h1 class="bd-title" id="content">Tables</h1>
 	<h2 id="examples">Examples</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<table class="table">
 			<thead>
 				<tr>
@@ -745,7 +479,7 @@ jQuery( document ).ready(function() {
 			</tbody>
 		</table>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<table class="table table-inverse">
 			<thead>
 				<tr>
@@ -778,7 +512,7 @@ jQuery( document ).ready(function() {
 		</table>
 	</div>
 	<h2 id="table-head-options">Table head options</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<table class="table">
 			<thead class="thead-inverse">
 				<tr>
@@ -841,7 +575,7 @@ jQuery( document ).ready(function() {
 		</table>
 	</div>
 	<h2 id="striped-rows">Striped rows</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -873,7 +607,7 @@ jQuery( document ).ready(function() {
 			</tbody>
 		</table>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<table class="table table-striped table-inverse">
 			<thead>
 				<tr>
@@ -906,7 +640,7 @@ jQuery( document ).ready(function() {
 		</table>
 	</div>
 	<h2 id="bordered-table">Bordered table</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<table class="table table-bordered">
 			<thead>
 				<tr>
@@ -943,7 +677,7 @@ jQuery( document ).ready(function() {
 			</tbody>
 		</table>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<table class="table table-bordered table-inverse">
 			<thead>
 				<tr>
@@ -981,7 +715,7 @@ jQuery( document ).ready(function() {
 		</table>
 	</div>
 	<h2 id="hoverable-rows">Hoverable rows</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<table class="table table-hover">
 			<thead>
 				<tr>
@@ -1012,7 +746,7 @@ jQuery( document ).ready(function() {
 			</tbody>
 		</table>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<table class="table table-hover table-inverse">
 			<thead>
 				<tr>
@@ -1044,7 +778,7 @@ jQuery( document ).ready(function() {
 		</table>
 	</div>
 	<h2 id="small-table">Small table</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<table class="table table-sm">
 			<thead>
 				<tr>
@@ -1075,7 +809,7 @@ jQuery( document ).ready(function() {
 			</tbody>
 		</table>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<table class="table table-sm table-inverse">
 			<thead>
 				<tr>
@@ -1331,12 +1065,12 @@ jQuery( document ).ready(function() {
 		</table>
 	</div>
 	<h1 class="bd-title" id="content">Figures</h1>
-	<div class="bd-example" data-example-id="">
-		<figure class="figure"> <img data-src="" class="figure-img img-fluid rounded" alt="800px x 600px native image, 400px x 300px display size" style="width: 400px; height: 300px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-800x600-01.jpg">
+	<div class="bd-example">
+		<figure class="figure"> <img class="figure-img img-fluid rounded" alt="800px x 600px native image, 400px x 300px display size" style="width: 400px; height: 300px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-800x600-01.jpg">
 			<figcaption class="figure-caption">A caption for the above image.</figcaption>
 		</figure>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<figure class="figure"> <img data-src="holder.js/400x300" class="figure-img img-fluid rounded" alt="800px x 600px native image, 400px x 300px display size" style="width: 400px; height: 300px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-800x600-02.jpg">
 			<figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
 		</figure>
@@ -1345,7 +1079,7 @@ jQuery( document ).ready(function() {
 	<h1 class="bd-title" id="content">Alerts</h1>
 	<h2 id="examples">Examples</h2>
 	<h3 id="link-color">Link color</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="alert alert-success" role="alert">
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
 			<strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>. </div>
@@ -1360,7 +1094,7 @@ jQuery( document ).ready(function() {
 			<strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again. </div>
 	</div>
 	<h3 id="additional-content">Additional content</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="alert alert-success" role="alert">
 			<h4 class="alert-heading">Well done!</h4>
 			<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
@@ -1369,7 +1103,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h1 class="bd-title" id="content">Badges</h1>
 	<h2 id="example">Example</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<h1>Example heading <span class="badge badge-default">New</span></h1>
 		<h2>Example heading <span class="badge badge-default">New</span></h2>
 		<h3>Example heading <span class="badge badge-default">New</span></h3>
@@ -1378,16 +1112,16 @@ jQuery( document ).ready(function() {
 		<h6>Example heading <span class="badge badge-default">New</span></h6>
 	</div>
 	<h2 id="contextual-variations">Contextual variations</h2>
-	<div class="bd-example" data-example-id=""> <span class="badge badge-default">Default</span> <span class="badge badge-primary">Primary</span> <span class="badge badge-success">Success</span> <span class="badge badge-info">Info</span> <span class="badge badge-warning">Warning</span> <span class="badge badge-danger">Danger</span> </div>
+	<div class="bd-example"> <span class="badge badge-default">Default</span> <span class="badge badge-primary">Primary</span> <span class="badge badge-success">Success</span> <span class="badge badge-info">Info</span> <span class="badge badge-warning">Warning</span> <span class="badge badge-danger">Danger</span> </div>
 	<h2 id="pill-badges">Pill badges</h2>
-	<div class="bd-example" data-example-id=""> <span class="badge badge-pill badge-default">Default</span> <span class="badge badge-pill badge-primary">Primary</span> <span class="badge badge-pill badge-success">Success</span> <span class="badge badge-pill badge-info">Info</span> <span class="badge badge-pill badge-warning">Warning</span> <span class="badge badge-pill badge-danger">Danger</span> </div>
+	<div class="bd-example"> <span class="badge badge-pill badge-default">Default</span> <span class="badge badge-pill badge-primary">Primary</span> <span class="badge badge-pill badge-success">Success</span> <span class="badge badge-pill badge-info">Info</span> <span class="badge badge-pill badge-warning">Warning</span> <span class="badge badge-pill badge-danger">Danger</span> </div>
 	<h1 class="bd-title" id="content">Breadcrumb</h1>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="breadcrumb"> <a class="breadcrumb-item" href="#">Home</a> <a class="breadcrumb-item" href="#">Library</a> <a class="breadcrumb-item" href="#">Data</a> <span class="breadcrumb-item active">Bootstrap</span> </nav>
 	</div>
 	<h1 class="bd-title" id="content">Buttons</h1>
 	<h2 id="examples">Examples</h2>
-	<div class="bd-example" data-example-id=""> 
+	<div class="bd-example"> 
 		<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 		<button type="button" class="btn btn-primary">Primary</button>
 		
@@ -1410,14 +1144,14 @@ jQuery( document ).ready(function() {
 		<button type="button" class="btn btn-link">Link</button>
 	</div>
 	<h2 id="button-tags">Button tags</h2>
-	<div class="bd-example" data-example-id=""> <a class="btn btn-primary" href="#" role="button">Link</a>
+	<div class="bd-example"> <a class="btn btn-primary" href="#" role="button">Link</a>
 		<button class="btn btn-primary" type="submit">Button</button>
 		<input class="btn btn-primary" value="Input" type="button">
 		<input class="btn btn-primary" value="Submit" type="submit">
 		<input class="btn btn-primary" value="Reset" type="reset">
 	</div>
 	<h2 id="outline-buttons">Outline buttons</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<button type="button" class="btn btn-outline-primary">Primary</button>
 		<button type="button" class="btn btn-outline-secondary">Secondary</button>
 		<button type="button" class="btn btn-outline-success">Success</button>
@@ -1426,33 +1160,33 @@ jQuery( document ).ready(function() {
 		<button type="button" class="btn btn-outline-danger">Danger</button>
 	</div>
 	<h2 id="sizes">Sizes</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<button type="button" class="btn btn-primary btn-lg">Large button</button>
 		<button type="button" class="btn btn-secondary btn-lg">Large button</button>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<button type="button" class="btn btn-primary btn-sm">Small button</button>
 		<button type="button" class="btn btn-secondary btn-sm">Small button</button>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
 		<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
 	</div>
 	<h2 id="active-state">Active state</h2>
-	<div class="bd-example" data-example-id=""> <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a> <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a> </div>
+	<div class="bd-example"> <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a> <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a> </div>
 	<h2 id="disabled-state">Disabled state</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<button type="button" class="btn btn-lg btn-primary" disabled="">Primary button</button>
 		<button type="button" class="btn btn-secondary btn-lg" disabled="">Button</button>
 	</div>
-	<div class="bd-example" data-example-id=""> <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a> <a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a> </div>
+	<div class="bd-example"> <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a> <a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a> </div>
 	<h2 id="button-plugin">Button plugin</h2>
 	<h3 id="toggle-states">Toggle states</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"> Single toggle </button>
 	</div>
 	<h3 id="checkbox-and-radio-buttons">Checkbox and radio buttons</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="btn-group" data-toggle="buttons">
 			<label class="btn btn-primary active">
 				<input checked="" autocomplete="off" type="checkbox">
@@ -1465,7 +1199,7 @@ jQuery( document ).ready(function() {
 				Checkbox 3 </label>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="btn-group" data-toggle="buttons">
 			<label class="btn btn-primary active">
 				<input name="options" id="option1" autocomplete="off" checked="" type="radio">
@@ -1480,7 +1214,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h1 class="bd-title" id="content">Button group</h1>
 	<h2 id="button-toolbar">Button toolbar</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
 			<div class="btn-group mr-2" role="group" aria-label="First group">
 				<button type="button" class="btn btn-secondary">1</button>
@@ -1498,7 +1232,7 @@ jQuery( document ).ready(function() {
 			</div>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
 			<div class="btn-group mr-2" role="group" aria-label="First group">
 				<button type="button" class="btn btn-secondary">1</button>
@@ -1543,7 +1277,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="nesting">Nesting</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 			<button type="button" class="btn btn-secondary">1</button>
 			<button type="button" class="btn btn-secondary">2</button>
@@ -1590,8 +1324,8 @@ jQuery( document ).ready(function() {
 	</div>
 	<h1 class="bd-title" id="content">Cards</h1>
 	<h2 id="example">Example</h2>
-	<div class="bd-example" data-example-id="">
-		<div class="card" style="width: 20rem;"> <img class="card-img-top" data-src="" alt="636px x 180px native image, 318px x 180px display size" style="height: 180px; width: 100%; display: block;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-636x360-01.jpg">
+	<div class="bd-example">
+		<div class="card" style="width: 20rem;"> <img class="card-img-top" alt="636px x 180px native image, 318px x 180px display size" style="height: 180px; width: 100%; display: block;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-636x360-01.jpg">
 			<div class="card-block">
 				<h4 class="card-title">Card title</h4>
 				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -1600,13 +1334,13 @@ jQuery( document ).ready(function() {
 	</div>
 	<h2 id="content-types">Content types</h2>
 	<h3 id="blocks">Blocks</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card">
 			<div class="card-block"> This is some text within a card block. </div>
 		</div>
 	</div>
 	<h3 id="titles-text-and-links">Titles, text, and links</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card">
 			<div class="card-block">
 				<h4 class="card-title">Card title</h4>
@@ -1616,7 +1350,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="images">Images</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card"> <img class="card-img-top img-fluid" alt="2,000px x 500px native image, responsive display size" style="" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-2000x500-02.jpg">
 			<div class="card-block">
 				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -1624,7 +1358,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="list-groups">List groups</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card">
 			<ul class="list-group list-group-flush">
 				<li class="list-group-item">Cras justo odio</li>
@@ -1634,7 +1368,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="kitchen-sink">Kitchen sink</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card" style="width: 20rem;"> <img class="card-img-top" alt="636px x 180px native image, 318px x 180px display size" style="height: 180px; width: 100%; display: block;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-636x360-02.jpg">
 			<div class="card-block">
 				<h4 class="card-title">Card title</h4>
@@ -1649,7 +1383,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="header-and-footer">Header and footer</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card">
 			<div class="card-header"> Featured </div>
 			<div class="card-block">
@@ -1658,7 +1392,7 @@ jQuery( document ).ready(function() {
 				<a href="#" class="btn btn-primary">Go somewhere</a> </div>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card">
 			<h3 class="card-header">Featured</h3>
 			<div class="card-block">
@@ -1667,7 +1401,7 @@ jQuery( document ).ready(function() {
 				<a href="#" class="btn btn-primary">Go somewhere</a> </div>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card">
 			<div class="card-header"> Quote </div>
 			<div class="card-block">
@@ -1678,7 +1412,7 @@ jQuery( document ).ready(function() {
 			</div>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card text-center">
 			<div class="card-header"> Featured </div>
 			<div class="card-block">
@@ -1690,7 +1424,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h2 id="sizing">Sizing</h2>
 	<h3 id="using-grid-markup">Using grid markup</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="row">
 			<div class="col-sm-6">
 				<div class="card">
@@ -1711,7 +1445,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="using-utilities">Using utilities</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card w-75">
 			<div class="card-block">
 				<h3 class="card-title">Card title</h3>
@@ -1726,7 +1460,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="using-custom-css">Using custom CSS</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card" style="width: 20rem;">
 			<div class="card-block">
 				<h3 class="card-title">Special title treatment</h3>
@@ -1735,7 +1469,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="text-alignment">Text alignment</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card" style="width: 20rem;">
 			<div class="card-block">
 				<h4 class="card-title">Special title treatment</h4>
@@ -1756,7 +1490,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="navigation">Navigation</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card text-center">
 			<div class="card-header">
 				<ul class="nav nav-tabs card-header-tabs">
@@ -1771,7 +1505,7 @@ jQuery( document ).ready(function() {
 				<a href="#" class="btn btn-primary">Go somewhere</a> </div>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card text-center">
 			<div class="card-header">
 				<ul class="nav nav-pills card-header-pills">
@@ -1788,7 +1522,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h2 id="images-1">Images</h2>
 	<h3 id="image-caps">Image caps</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card mb-3"> <img class="card-img-top img-fluid" alt="2,000px x 500px native image, responsive display size" style="" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-2000x500-03.jpg">
 			<div class="card-block">
 				<h4 class="card-title">Card title</h4>
@@ -1805,7 +1539,7 @@ jQuery( document ).ready(function() {
 			<img class="card-img-bottom img-fluid" alt="2,000px x 500px native image, responsive display size" style="" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-2000x500-04.jpg"> </div>
 	</div>
 	<h3 id="image-overlays">Image overlays</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card card-inverse"> <img class="card-img img-fluid" alt="2,000px x 500px native image, responsive display size" style="" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-2000x500-05.jpg">
 			<div class="card-img-overlay">
 				<h4 class="card-title" style="color:#222222;">Card title</h4>
@@ -1816,7 +1550,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h2 id="card-styles">Card styles</h2>
 	<h3 id="inverted-text">Inverted text</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card card-inverse" style="background-color: #333; border-color: #333;">
 			<div class="card-block">
 				<h3 class="card-title">Special title treatment</h3>
@@ -1825,7 +1559,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="background-variants">Background variants</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card card-inverse card-primary mb-3 text-center">
 			<div class="card-block">
 				<blockquote class="card-blockquote">
@@ -1868,7 +1602,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="outline-cards">Outline cards</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card card-outline-primary mb-3 text-center">
 			<div class="card-block">
 				<blockquote class="card-blockquote">
@@ -1920,7 +1654,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h2 id="card-layout">Card layout</h2>
 	<h3 id="card-groups">Card groups</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card-group">
 			<div class="card"> <img class="card-img-top img-fluid" alt="636px x 180px native image, responsive display size" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-636x360-03.jpg">
 				<div class="card-block">
@@ -1945,7 +1679,7 @@ jQuery( document ).ready(function() {
 			</div>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card-group">
 			<div class="card"> <img class="card-img-top img-fluid" alt="512px x 360px native image, responsive display size" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-512x360-01.jpg">
 				<div class="card-block">
@@ -1971,7 +1705,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="card-decks">Card decks</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card-deck">
 			<div class="card"> <img class="card-img-top img-fluid" alt="512px x 280px native image, responsive display size" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-512x280-02.jpg">
 				<div class="card-block">
@@ -1996,7 +1730,7 @@ jQuery( document ).ready(function() {
 			</div>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card-deck">
 			<div class="card"> <img class="card-img-top img-fluid" alt="512px x 360px native image, responsive display size" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-512x360-04.jpg">
 				<div class="card-block">
@@ -2022,7 +1756,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="card-columns">Card columns</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="card-columns">
 			<div class="card"> <img class="card-img-top img-fluid" alt="484px x 320px native image, responsive display size" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-484x320-01.jpg">
 				<div class="card-block">
@@ -2076,7 +1810,7 @@ jQuery( document ).ready(function() {
 	<h1 class="bd-title" id="content">Carousel</h1>
 	<h2 id="example">Example</h2>
 	<h3 id="slides-only">Slides only - fill carousel area responsively</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div id="carouselExampleSlidesOnlyFill" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner" role="listbox">
 				<div class="carousel-item"> <img class="" alt="2,000px x 600px native image, responsive display size" style="" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-2000x600-01.jpg"> </div>
@@ -2086,7 +1820,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="slides-only">Slides only - fit images responsively</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div id="carouselExampleSlidesOnlyFit" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner" role="listbox">
 				<div class="carousel-item"> <img class="" alt="2,000px x 600px native image, responsive display size" style="" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-2000x600-01.jpg"> </div>
@@ -2096,7 +1830,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="with-controls">With controls  - fill carousel area responsively</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner" role="listbox">
 				<div class="carousel-inner" role="listbox">
@@ -2108,7 +1842,7 @@ jQuery( document ).ready(function() {
 			<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
 	</div>
 	<h3 id="with-indicators">With controls and indicators  - fill carousel area responsively</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
@@ -2159,7 +1893,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h1 class="bd-title" id="content">Collapse</h1>
 	<h2 id="example">Example</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<p> <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Link with href </a>
 			<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Button with data-target </button>
 		</p>
@@ -2168,7 +1902,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="accordion-example">Accordion example</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div id="accordion" role="tablist" aria-multiselectable="true">
 			<div class="card">
 				<div class="card-header" role="tab" id="headingOne">
@@ -2199,13 +1933,13 @@ jQuery( document ).ready(function() {
 	<h1 class="bd-title" id="content">Dropdowns</h1>
 	<h2 id="examples">Examples</h2>
 	<h3 id="single-button-dropdowns">Single button dropdowns</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="dropdown">
 			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown button </button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a> </div>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="dropdown"> <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown link </a>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a> </div>
 		</div>
@@ -2361,7 +2095,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="menu-items">Menu items</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="dropdown">
 			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -2372,7 +2106,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="menu-alignment">Menu alignment</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="btn-group">
 			<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> This dropdown's menu is right-aligned </button>
 			<div class="dropdown-menu dropdown-menu-right">
@@ -2383,24 +2117,24 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="menu-headers">Menu headers</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="dropdown-menu">
 			<h6 class="dropdown-header">Dropdown header</h6>
 			<a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> </div>
 	</div>
 	<h2 id="menu-dividers">Menu dividers</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
 			<div class="dropdown-divider"></div>
 			<a class="dropdown-item" href="#">Separated link</a> </div>
 	</div>
 	<h2 id="disabled-menu-items">Disabled menu items</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="dropdown-menu"> <a class="dropdown-item" href="#">Regular link</a> <a class="dropdown-item disabled" href="#">Disabled link</a> <a class="dropdown-item" href="#">Another link</a> </div>
 	</div>
 	<h1 class="bd-title" id="content">Forms</h1>
 	<h2 id="form-controls">Form controls</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<form>
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email address</label>
@@ -2465,7 +2199,7 @@ jQuery( document ).ready(function() {
 		</form>
 	</div>
 	<h3 id="textual-inputs">Textual inputs</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="form-group row">
 			<label for="example-text-input" class="col-2 col-form-label">Text</label>
 			<div class="col-10">
@@ -2547,7 +2281,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h2 id="form-layouts">Form layouts</h2>
 	<h3 id="form-groups">Form groups</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<form>
 			<div class="form-group">
 				<label for="formGroupExampleInput">Example label</label>
@@ -2560,7 +2294,7 @@ jQuery( document ).ready(function() {
 		</form>
 	</div>
 	<h3 id="inline-forms">Inline forms</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<form class="form-inline">
 			<label class="sr-only" for="inlineFormInput">Name</label>
 			<input class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Jane Doe" type="text">
@@ -2577,7 +2311,7 @@ jQuery( document ).ready(function() {
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<form class="form-inline">
 			<label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
 			<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
@@ -2593,7 +2327,7 @@ jQuery( document ).ready(function() {
 		</form>
 	</div>
 	<h3 id="using-the-grid">Using the Grid</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="container">
 			<form>
 				<div class="form-group row">
@@ -2646,7 +2380,7 @@ jQuery( document ).ready(function() {
 			</form>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="container">
 			<form>
 				<div class="form-group row">
@@ -2666,7 +2400,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h2 id="checkboxes-and-radios">Checkboxes and radios</h2>
 	<h3 id="default-stacked">Default (stacked)</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="form-check">
 			<label class="form-check-label">
 				<input class="form-check-input" value="" type="checkbox">
@@ -2678,7 +2412,7 @@ jQuery( document ).ready(function() {
 				Option two is disabled </label>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="form-check">
 			<label class="form-check-label">
 				<input class="form-check-input" name="exampleRadios" id="exampleRadios1" value="option1" checked="" type="radio">
@@ -2696,7 +2430,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="inline">Inline</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="form-check form-check-inline">
 			<label class="form-check-label">
 				<input class="form-check-input" id="inlineCheckbox1" value="option1" type="checkbox">
@@ -2713,7 +2447,7 @@ jQuery( document ).ready(function() {
 				3 </label>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="form-check form-check-inline">
 			<label class="form-check-label">
 				<input class="form-check-input" name="inlineRadioOptions" id="inlineRadio1" value="option1" type="radio">
@@ -2731,7 +2465,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="without-labels">Without labels</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="form-check">
 			<label class="form-check-label">
 				<input class="form-check-input" id="blankCheckbox" value="option1" aria-label="..." type="checkbox">
@@ -2744,7 +2478,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="static-controls">Static controls</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<form>
 			<div class="form-group row">
 				<label class="col-sm-2 col-form-label">Email</label>
@@ -2760,7 +2494,7 @@ jQuery( document ).ready(function() {
 			</div>
 		</form>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<form class="form-inline">
 			<div class="form-group">
 				<label class="sr-only">Email</label>
@@ -2774,7 +2508,7 @@ jQuery( document ).ready(function() {
 		</form>
 	</div>
 	<h2 id="disabled-states">Disabled states</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<form>
 			<fieldset disabled>
 				<div class="form-group">
@@ -2797,16 +2531,16 @@ jQuery( document ).ready(function() {
 		</form>
 	</div>
 	<h2 id="readonly-inputs">Readonly inputs</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<input class="form-control" placeholder="Readonly input here…" readonly type="text">
 	</div>
 	<h2 id="control-sizing">Control sizing</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<input class="form-control form-control-lg" placeholder=".form-control-lg" type="text">
 		<input class="form-control" placeholder="Default input" type="text">
 		<input class="form-control form-control-sm" placeholder=".form-control-sm" type="text">
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<select class="form-control form-control-lg">
 			<option>Large select</option>
 		</select>
@@ -2818,7 +2552,7 @@ jQuery( document ).ready(function() {
 		</select>
 	</div>
 	<h2 id="column-sizing">Column sizing</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="row">
 			<div class="col-2">
 				<input class="form-control" placeholder=".col-2" type="text">
@@ -2833,13 +2567,13 @@ jQuery( document ).ready(function() {
 	</div>
 	<h2 id="help-text">Help text</h2>
 	<h3 id="block-level">Block level</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<label for="inputPassword5">Password</label>
 		<input id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" type="password">
 		<p id="passwordHelpBlock" class="form-text text-muted"> Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji. </p>
 	</div>
 	<h3 id="inline-1">Inline</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<form class="form-inline">
 			<div class="form-group">
 				<label for="inputPassword4">Password</label>
@@ -2849,7 +2583,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h2 id="validation">Validation</h2>
 	<h3 id="examples">Examples</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="form-group has-success">
 			<label class="form-control-label" for="inputSuccess1">Input with success</label>
 			<input class="form-control form-control-success" id="inputSuccess1" type="text">
@@ -2866,7 +2600,7 @@ jQuery( document ).ready(function() {
 			<div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
 			<small class="form-text text-muted">Example help text that remains unchanged.</small> </div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="container">
 			<form>
 				<div class="form-group row has-success">
@@ -2893,7 +2627,7 @@ jQuery( document ).ready(function() {
 			</form>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="form-check has-success">
 			<label class="form-check-label">
 				<input class="form-check-input" id="checkboxSuccess" value="option1" type="checkbox">
@@ -2913,7 +2647,7 @@ jQuery( document ).ready(function() {
 	<h2 id="custom-forms">Custom forms</h2>
 	<h3 id="checkboxes-and-radios-1">Checkboxes and radios</h3>
 	<h4 id="checkboxes">Checkboxes</h4>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<label class="custom-control custom-checkbox">
 			<input class="custom-control-input" type="checkbox">
 			<span class="custom-control-indicator"></span> <span class="custom-control-description">Check this custom checkbox</span> </label>
@@ -2924,7 +2658,7 @@ jQuery( document ).ready(function() {
 			<span class="custom-control-indicator"></span> <span class="custom-control-description">Check this custom checkbox</span> </label>
 	</div>
 	<h4 id="radios">Radios</h4>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<label class="custom-control custom-radio">
 			<input id="radio1" name="radio" class="custom-control-input" type="radio">
 			<span class="custom-control-indicator"></span> <span class="custom-control-description">Toggle this custom radio</span> </label>
@@ -2933,7 +2667,7 @@ jQuery( document ).ready(function() {
 			<span class="custom-control-indicator"></span> <span class="custom-control-description">Or toggle this other custom radio</span> </label>
 	</div>
 	<h4 id="disabled">Disabled</h4>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<label class="custom-control custom-checkbox">
 			<input class="custom-control-input" disabled="" type="checkbox">
 			<span class="custom-control-indicator"></span> <span class="custom-control-description">Check this custom checkbox</span> </label>
@@ -2942,7 +2676,7 @@ jQuery( document ).ready(function() {
 			<span class="custom-control-indicator"></span> <span class="custom-control-description">Toggle this custom radio</span> </label>
 	</div>
 	<h4 id="validation-states">Validation states</h4>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="form-group has-success">
 			<label class="custom-control custom-checkbox">
 				<input class="custom-control-input" type="checkbox">
@@ -2960,7 +2694,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h4 id="stacked">Stacked</h4>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="custom-controls-stacked">
 			<label class="custom-control custom-radio">
 				<input id="radioStacked1" name="radio-stacked" class="custom-control-input" type="radio">
@@ -2971,7 +2705,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="select-menu">Select menu</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<select class="custom-select">
 			<option selected="">Open this select menu</option>
 			<option value="1">One</option>
@@ -2980,14 +2714,14 @@ jQuery( document ).ready(function() {
 		</select>
 	</div>
 	<h3 id="file-browser">File browser</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<label class="custom-file">
 			<input id="file" class="custom-file-input" type="file">
 			<span class="custom-file-control"></span> </label>
 	</div>
 	<h1 class="bd-title" id="content">Input group</h1>
 	<h2 id="basic-example">Basic example</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="input-group"> <span class="input-group-addon" id="basic-addon1">@</span>
 			<input class="form-control" placeholder="Username" aria-describedby="basic-addon1" type="text">
 		</div>
@@ -3010,7 +2744,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="sizing">Sizing</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="input-group input-group-lg"> <span class="input-group-addon" id="sizing-addon1">@</span>
 			<input class="form-control" placeholder="Username" aria-describedby="sizing-addon1" type="text">
 		</div>
@@ -3020,7 +2754,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="checkboxes-and-radio-addons">Checkboxes and radio addons</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="input-group"> <span class="input-group-addon">
@@ -3039,7 +2773,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="multiple-addons">Multiple addons</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="input-group"> <span class="input-group-addon">
@@ -3056,7 +2790,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="button-addons">Button addons</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="input-group"> <span class="input-group-btn">
@@ -3087,7 +2821,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="buttons-with-dropdowns">Buttons with dropdowns</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="input-group">
@@ -3114,7 +2848,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="segmented-buttons">Segmented buttons</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="input-group">
@@ -3144,7 +2878,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h1 class="bd-title" id="content">Jumbotron</h1>
 	<h2 id="example">Example</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="jumbotron">
 			<h1 class="display-3">Hello, world!</h1>
 			<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
@@ -3153,7 +2887,7 @@ jQuery( document ).ready(function() {
 			<p class="lead"> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> </p>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="jumbotron jumbotron-fluid">
 			<div class="container">
 				<h1 class="display-3">Fluid jumbotron</h1>
@@ -3163,7 +2897,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h1 class="bd-title" id="content">List group</h1>
 	<h2 id="basic-example">Basic example</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="list-group">
 			<li class="list-group-item">Cras justo odio</li>
 			<li class="list-group-item">Dapibus ac facilisis in</li>
@@ -3173,7 +2907,7 @@ jQuery( document ).ready(function() {
 		</ul>
 	</div>
 	<h2 id="active-items">Active items</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="list-group">
 			<li class="list-group-item active">Cras justo odio</li>
 			<li class="list-group-item">Dapibus ac facilisis in</li>
@@ -3183,7 +2917,7 @@ jQuery( document ).ready(function() {
 		</ul>
 	</div>
 	<h2 id="disabled-items">Disabled items</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="list-group">
 			<li class="list-group-item disabled">Cras justo odio</li>
 			<li class="list-group-item">Dapibus ac facilisis in</li>
@@ -3193,10 +2927,10 @@ jQuery( document ).ready(function() {
 		</ul>
 	</div>
 	<h2 id="links-and-buttons">Links and buttons</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="list-group"> <a href="#" class="list-group-item active"> Cras justo odio </a> <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a> <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a> <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a> <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a> </div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="list-group">
 			<button type="button" class="list-group-item list-group-item-action active"> Cras justo odio </button>
 			<button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
@@ -3206,7 +2940,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h2 id="contextual-classes">Contextual classes</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="list-group">
 			<li class="list-group-item">Dapibus ac facilisis in</li>
 			<li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
@@ -3215,11 +2949,11 @@ jQuery( document ).ready(function() {
 			<li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
 		</ul>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="list-group"> <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a> <a href="#" class="list-group-item list-group-item-action list-group-item-success">Dapibus ac facilisis in</a> <a href="#" class="list-group-item list-group-item-action list-group-item-info">Cras sit amet nibh libero</a> <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Porta ac consectetur ac</a> <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Vestibulum at eros</a> </div>
 	</div>
 	<h2 id="with-badges">With badges</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="list-group">
 			<li class="list-group-item justify-content-between"> Cras justo odio <span class="badge badge-default badge-pill">14</span> </li>
 			<li class="list-group-item justify-content-between"> Dapibus ac facilisis in <span class="badge badge-default badge-pill">2</span> </li>
@@ -3227,7 +2961,7 @@ jQuery( document ).ready(function() {
 		</ul>
 	</div>
 	<h2 id="custom-content">Custom content</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="list-group"> <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
 			<div class="d-flex w-100 justify-content-between">
 				<h5 class="mb-1">List group item heading</h5>
@@ -3393,7 +3127,7 @@ jQuery( document ).ready(function() {
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gridSystemModal"> Launch demo modal </button>
 	</div>
 	<h3 id="varying-modal-content">Varying modal content</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
@@ -3453,7 +3187,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h1 class="bd-title" id="content">Navs</h1>
 	<h2 id="base-nav">Base nav</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="nav">
 			<li class="nav-item"> <a class="nav-link active" href="#">Active</a> </li>
 			<li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
@@ -3461,12 +3195,12 @@ jQuery( document ).ready(function() {
 			<li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
 		</ul>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="nav"> <a class="nav-link active" href="#">Active</a> <a class="nav-link" href="#">Link</a> <a class="nav-link" href="#">Link</a> <a class="nav-link disabled" href="#">Disabled</a> </nav>
 	</div>
 	<h2 id="available-styles">Available styles</h2>
 	<h3 id="horizontal-alignment">Horizontal alignment</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="nav justify-content-center">
 			<li class="nav-item"> <a class="nav-link active" href="#">Active</a> </li>
 			<li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
@@ -3474,7 +3208,7 @@ jQuery( document ).ready(function() {
 			<li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
 		</ul>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="nav justify-content-end">
 			<li class="nav-item"> <a class="nav-link active" href="#">Active</a> </li>
 			<li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
@@ -3483,7 +3217,7 @@ jQuery( document ).ready(function() {
 		</ul>
 	</div>
 	<h3 id="vertical">Vertical</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="nav flex-column">
 			<li class="nav-item"> <a class="nav-link active" href="#">Active</a> </li>
 			<li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
@@ -3491,11 +3225,11 @@ jQuery( document ).ready(function() {
 			<li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
 		</ul>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="nav flex-column"> <a class="nav-link active" href="#">Active</a> <a class="nav-link" href="#">Link</a> <a class="nav-link" href="#">Link</a> <a class="nav-link disabled" href="#">Disabled</a> </nav>
 	</div>
 	<h3 id="tabs">Tabs</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="nav nav-tabs">
 			<li class="nav-item"> <a class="nav-link active" href="#">Active</a> </li>
 			<li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
@@ -3504,7 +3238,7 @@ jQuery( document ).ready(function() {
 		</ul>
 	</div>
 	<h3 id="pills">Pills</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="nav nav-pills">
 			<li class="nav-item"> <a class="nav-link active" href="#">Active</a> </li>
 			<li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
@@ -3513,7 +3247,7 @@ jQuery( document ).ready(function() {
 		</ul>
 	</div>
 	<h3 id="fill-and-justify">Fill and justify</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="nav nav-pills nav-fill">
 			<li class="nav-item"> <a class="nav-link active" href="#">Active</a> </li>
 			<li class="nav-item"> <a class="nav-link" href="#">Longer nav link</a> </li>
@@ -3521,7 +3255,7 @@ jQuery( document ).ready(function() {
 			<li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
 		</ul>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="nav nav-pills nav-justified">
 			<li class="nav-item"> <a class="nav-link active" href="#">Active</a> </li>
 			<li class="nav-item"> <a class="nav-link" href="#">Longer nav link</a> </li>
@@ -3530,12 +3264,12 @@ jQuery( document ).ready(function() {
 		</ul>
 	</div>
 	<h2 id="working-with-flex-utilities">Working with flex utilities</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="nav nav-pills flex-column flex-sm-row"> <a class="flex-sm-fill text-sm-center nav-link active" href="#">Active</a> <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a> <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a> <a class="flex-sm-fill text-sm-center nav-link disabled" href="#">Disabled</a> </nav>
 	</div>
 	<h2 id="using-dropdowns">Using dropdowns</h2>
 	<h3 id="tabs-with-dropdowns">Tabs with dropdowns</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="nav nav-tabs">
 			<li class="nav-item"> <a class="nav-link active" href="#">Active</a> </li>
 			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -3548,7 +3282,7 @@ jQuery( document ).ready(function() {
 		</ul>
 	</div>
 	<h3 id="pills-with-dropdowns">Pills with dropdowns</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<ul class="nav nav-pills">
 			<li class="nav-item"> <a class="nav-link active" href="#">Active</a> </li>
 			<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -3586,7 +3320,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h1 class="bd-title" id="content">Navbar</h1>
 	<h2 id="supported-content">Supported content</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 			<a class="navbar-brand" href="#">Navbar</a>
@@ -3604,7 +3338,7 @@ jQuery( document ).ready(function() {
 		</nav>
 	</div>
 	<h3 id="brand">Brand</h3>
-	<div class="bd-example" data-example-id=""> 
+	<div class="bd-example"> 
 		<!-- As a link -->
 		<nav class="navbar navbar-light bg-faded"> <a class="navbar-brand" href="#">Navbar</a> </nav>
 		
@@ -3613,12 +3347,12 @@ jQuery( document ).ready(function() {
 			<h1 class="navbar-brand mb-0">Navbar</h1>
 		</nav>
 	</div>
-	<div class="bd-example" data-example-id=""> 
+	<div class="bd-example"> 
 		<!-- Image and text -->
 		<nav class="navbar navbar-light bg-faded"> <a class="navbar-brand" href="#"> <img src="/assets/brand/bootstrap-solid.svg" class="d-inline-block align-top" alt="" width="30" height="30"> Bootstrap </a> </nav>
 	</div>
 	<h3 id="nav">Nav</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 			<a class="navbar-brand" href="#">Navbar</a>
@@ -3627,7 +3361,7 @@ jQuery( document ).ready(function() {
 			</div>
 		</nav>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 			<a class="navbar-brand" href="#">Navbar</a>
@@ -3644,7 +3378,7 @@ jQuery( document ).ready(function() {
 		</nav>
 	</div>
 	<h3 id="forms">Forms</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-light bg-faded">
 			<form class="form-inline">
 				<input class="form-control mr-sm-2" placeholder="Search" type="text">
@@ -3652,7 +3386,7 @@ jQuery( document ).ready(function() {
 			</form>
 		</nav>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-light bg-faded justify-content-between"> <a class="navbar-brand">Navbar</a>
 			<form class="form-inline">
 				<input class="form-control mr-sm-2" placeholder="Search" type="text">
@@ -3660,7 +3394,7 @@ jQuery( document ).ready(function() {
 			</form>
 		</nav>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-light bg-faded">
 			<form class="form-inline">
 				<div class="input-group"> <span class="input-group-addon" id="basic-addon1">@</span>
@@ -3669,7 +3403,7 @@ jQuery( document ).ready(function() {
 			</form>
 		</nav>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-light bg-faded">
 			<form class="form-inline">
 				<button class="btn btn-outline-success" type="button">Main button</button>
@@ -3678,10 +3412,10 @@ jQuery( document ).ready(function() {
 		</nav>
 	</div>
 	<h3 id="text">Text</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-light bg-faded"> <span class="navbar-text"> Navbar text with an inline element </span> </nav>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 			<a class="navbar-brand" href="#">Navbar w/ text</a>
@@ -3746,32 +3480,32 @@ jQuery( document ).ready(function() {
 		</nav>
 	</div>
 	<h2 id="containers">Containers</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="container">
 			<nav class="navbar navbar-toggleable-md navbar-light bg-faded"> <a class="navbar-brand" href="#">Navbar</a> </nav>
 		</div>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 			<div class="container"> <a class="navbar-brand" href="#">Navbar</a> </div>
 		</nav>
 	</div>
 	<h2 id="placement">Placement</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-light bg-faded"> <a class="navbar-brand" href="#">Full width</a> </nav>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar fixed-top navbar-light bg-faded"> <a class="navbar-brand" href="#">Fixed top</a> </nav>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar fixed-bottom navbar-light bg-faded"> <a class="navbar-brand" href="#">Fixed bottom</a> </nav>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar sticky-top navbar-light bg-faded"> <a class="navbar-brand" href="#">Sticky top</a> </nav>
 	</div>
 	<h2 id="responsive-behaviors">Responsive behaviors</h2>
 	<h3 id="toggler">Toggler</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo01"> <a class="navbar-brand" href="#">Hidden brand</a>
@@ -3787,7 +3521,7 @@ jQuery( document ).ready(function() {
 			</div>
 		</nav>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
 			<a class="navbar-brand" href="#">Navbar</a>
@@ -3805,7 +3539,7 @@ jQuery( document ).ready(function() {
 		</nav>
 	</div>
 	<h3 id="external-content">External content</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="pos-f-t">
 			<div class="collapse" id="navbarToggleExternalContent">
 				<div class="bg-inverse p-4">
@@ -3819,7 +3553,7 @@ jQuery( document ).ready(function() {
 	</div>
 	<h1 class="bd-title" id="content">Pagination</h1>
 	<h2 id="overview">Overview</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav aria-label="Page navigation example">
 			<ul class="pagination">
 				<li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -3831,7 +3565,7 @@ jQuery( document ).ready(function() {
 		</nav>
 	</div>
 	<h2 id="working-with-icons">Working with icons</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav aria-label="Page navigation example">
 			<ul class="pagination">
 				<li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">«</span> <span class="sr-only">Previous</span> </a> </li>
@@ -3843,7 +3577,7 @@ jQuery( document ).ready(function() {
 		</nav>
 	</div>
 	<h2 id="disabled-and-active-states">Disabled and active states</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav aria-label="...">
 			<ul class="pagination">
 				<li class="page-item disabled"> <a class="page-link" href="#" tabindex="-1">Previous</a> </li>
@@ -3854,7 +3588,7 @@ jQuery( document ).ready(function() {
 			</ul>
 		</nav>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav aria-label="...">
 			<ul class="pagination">
 				<li class="page-item disabled"> <span class="page-link">Previous</span> </li>
@@ -3866,7 +3600,7 @@ jQuery( document ).ready(function() {
 		</nav>
 	</div>
 	<h2 id="sizing">Sizing</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav aria-label="...">
 			<ul class="pagination pagination-lg">
 				<li class="page-item disabled"> <a class="page-link" href="#" tabindex="-1">Previous</a> </li>
@@ -3877,7 +3611,7 @@ jQuery( document ).ready(function() {
 			</ul>
 		</nav>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav aria-label="...">
 			<ul class="pagination pagination-sm">
 				<li class="page-item disabled"> <a class="page-link" href="#" tabindex="-1">Previous</a> </li>
@@ -3889,7 +3623,7 @@ jQuery( document ).ready(function() {
 		</nav>
 	</div>
 	<h2 id="alignment">Alignment</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav aria-label="Page navigation example">
 			<ul class="pagination justify-content-center">
 				<li class="page-item disabled"> <a class="page-link" href="#" tabindex="-1">Previous</a> </li>
@@ -3900,7 +3634,7 @@ jQuery( document ).ready(function() {
 			</ul>
 		</nav>
 	</div>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<nav aria-label="Page navigation example">
 			<ul class="pagination justify-content-end">
 				<li class="page-item disabled"> <a class="page-link" href="#" tabindex="-1">Previous</a> </li>
@@ -3941,7 +3675,7 @@ jQuery( document ).ready(function() {
 		<div class="clearfix"></div>
 	</div>
 	<h2 id="live-demo">Live demo</h2>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Popover title">Click to toggle popover</button>
 	</div>
 	<h3 id="four-directions">Four directions</h3>
@@ -3954,17 +3688,17 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="dismiss-on-next-click">Dismiss on next click</h3>
-	<div class="bd-example" data-example-id=""> <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Dismissible popover">Dismissible popover</a> </div>
+	<div class="bd-example"> <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="Dismissible popover">Dismissible popover</a> </div>
 	<h1 class="bd-title" id="content">Progress</h1>
 	<h2 id="customizing">Customizing</h2>
 	<h3 id="labels">Labels</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="progress">
 			<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
 		</div>
 	</div>
 	<h3 id="height">Height</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="progress">
 			<div class="progress-bar" role="progressbar" style="width: 25%; height: 1px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 		</div>
@@ -3973,7 +3707,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="backgrounds">Backgrounds</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="progress">
 			<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 		</div>
@@ -3988,7 +3722,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="multiple-bars">Multiple bars</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="progress">
 			<div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
 			<div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -3996,7 +3730,7 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 	<h3 id="striped">Striped</h3>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<div class="progress">
 			<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
 		</div>
@@ -4083,12 +3817,19 @@ jQuery( document ).ready(function() {
 	<h1 class="bd-title" id="content">Borders</h1>
 	<h2 id="border">Border</h2>
 	<div class="bd-example-border-utils">
-		<div class="bd-example" data-example-id=""> <span class="border-0"></span> <span class="border-top-0"></span> <span class="border-right-0"></span> <span class="border-bottom-0"></span> <span class="border-left-0"></span> </div>
+		<div class="bd-example"> <span class="border-0"></span> <span class="border-top-0"></span> <span class="border-right-0"></span> <span class="border-bottom-0"></span> <span class="border-left-0"></span> </div>
 	</div>
 	<h2 id="border-radius">Border-radius</h2>
-	<div class="bd-example bd-example-images"> <img data-src="holder.js/75x75" class="rounded" alt="75x75" style="width: 75px; height: 75px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2075%2075%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15a8b4d811d%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15a8b4d811d%22%3E%3Crect%20width%3D%2275%22%20height%3D%2275%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2218.5%22%20y%3D%2242.3%22%3E75x75%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true"> <img data-src="holder.js/75x75" class="rounded-top" alt="75x75" style="width: 75px; height: 75px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2075%2075%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15a8b4d8120%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15a8b4d8120%22%3E%3Crect%20width%3D%2275%22%20height%3D%2275%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2218.5%22%20y%3D%2242.3%22%3E75x75%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true"> <img data-src="holder.js/75x75" class="rounded-right" alt="75x75" style="width: 75px; height: 75px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2075%2075%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15a8b4d8123%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15a8b4d8123%22%3E%3Crect%20width%3D%2275%22%20height%3D%2275%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2218.5%22%20y%3D%2242.3%22%3E75x75%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true"> <img data-src="holder.js/75x75" class="rounded-bottom" alt="75x75" style="width: 75px; height: 75px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2075%2075%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15a8b4d8125%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15a8b4d8125%22%3E%3Crect%20width%3D%2275%22%20height%3D%2275%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2218.5%22%20y%3D%2242.3%22%3E75x75%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true"> <img data-src="holder.js/75x75" class="rounded-left" alt="75x75" style="width: 75px; height: 75px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2075%2075%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15a8b4d8126%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15a8b4d8126%22%3E%3Crect%20width%3D%2275%22%20height%3D%2275%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2218.5%22%20y%3D%2242.3%22%3E75x75%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true"> <img data-src="holder.js/75x75" class="rounded-circle" alt="75x75" style="width: 75px; height: 75px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2075%2075%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15a8b4d8128%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15a8b4d8128%22%3E%3Crect%20width%3D%2275%22%20height%3D%2275%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2218.5%22%20y%3D%2242.3%22%3E75x75%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true"> <img data-src="holder.js/75x75" class="rounded-0" alt="75x75" style="width: 75px; height: 75px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2275%22%20height%3D%2275%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2075%2075%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15a8b4d812a%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15a8b4d812a%22%3E%3Crect%20width%3D%2275%22%20height%3D%2275%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2218.5%22%20y%3D%2242.3%22%3E75x75%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true"> </div>
+	<div class="bd-example bd-example-images">
+	<img class="rounded" alt="150px x 150px native image, 75px x 75px display size" style="width: 75px; height: 75px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-150x150-01.jpg">
+	<img class="rounded-top" alt="150px x 150px native image, 75px x 75px display size" style="width: 75px; height: 75px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-150x150-02.jpg">
+	<img class="rounded-right" alt="150px x 150px native image, 75px x 75px display size" style="width: 75px; height: 75px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-150x150-03.jpg">
+	<img class="rounded-bottom" alt="150px x 150px native image, 75px x 75px display size" style="width: 75px; height: 75px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-150x150-04.jpg">
+	<img class="rounded-left" alt="150px x 150px native image, 75px x 75px display size" style="width: 75px; height: 75px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-150x150-05.jpg">
+	<img class="rounded-circle" alt="150px x 150px native image, 75px x 75px display size" style="width: 75px; height: 75px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-150x150-06.jpg">
+	<img class="rounded-0" alt="150px x 150px native image, 75px x 75px display size" style="width: 75px; height: 75px;" src="/wp-content/bootstrap4-demo-images/bootstrapv4-demo-example-150x150-07.jpg"></div>
 	<h1 class="bd-title" id="content">Colors</h1>
-	<div class="bd-example" data-example-id="">
+	<div class="bd-example">
 		<p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
 		<p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 		<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
@@ -4097,8 +3838,8 @@ jQuery( document ).ready(function() {
 		<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
 		<p class="text-white">Etiam porta sem malesuada ultricies vehicula.</p>
 	</div>
-	<div class="bd-example" data-example-id=""> <a href="#" class="text-muted">Muted link</a> <a href="#" class="text-primary">Primary link</a> <a href="#" class="text-success">Success link</a> <a href="#" class="text-info">Info link</a> <a href="#" class="text-warning">Warning link</a> <a href="#" class="text-danger">Danger link</a> </div>
-		<div class="bd-example" data-example-id="">
+	<div class="bd-example"> <a href="#" class="text-muted">Muted link</a> <a href="#" class="text-primary">Primary link</a> <a href="#" class="text-success">Success link</a> <a href="#" class="text-info">Info link</a> <a href="#" class="text-warning">Warning link</a> <a href="#" class="text-danger">Danger link</a> </div>
+		<div class="bd-example">
 			<div class="bg-primary text-white">Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
 			<div class="bg-success text-white">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</div>
 			<div class="bg-info text-white">Maecenas sed diam eget risus varius blandit sit amet non magna.</div>
@@ -4109,3 +3850,15 @@ jQuery( document ).ready(function() {
 		</div>
 	</div>
 </div>
+
+<script>
+jQuery( document ).ready(function() {
+	jQuery('[data-toggle="popover"]').popover();
+	jQuery('[data-toggle="tooltip"]').tooltip();
+	$( 'button.bd-toggle-animated-progress' ).click(function() {
+		$( this ).prev().children( '.progress-bar' ).toggleClass( 'progress-bar-animated' );
+	});
+});
+</script>
+
+<?php get_footer(); ?>
